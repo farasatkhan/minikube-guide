@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roadrunner-ecommerce-store-server
+  labels:
+    app: roadrunner-ecommerce-store-server
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+        app: roadrunner-ecommerce-store
+  template:
+    metadata:
+      labels:
+        app: roadrunner-ecommerce-store
+    spec:
+      containers:
+        - name: roadrunner-ecommerce-store-container
+          image: farasatkhan/roadrunner-ecommerce-store-laravel
+          ports:
+            - containerPort: 80
+
+ 
