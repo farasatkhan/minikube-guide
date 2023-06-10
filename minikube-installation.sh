@@ -4,7 +4,7 @@
 apt install curl
 
 # Step 2: Install Docker
-apt install -y docker.io 
+apt install docker
 
 # Step 3: Download kubectl binary
 curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
