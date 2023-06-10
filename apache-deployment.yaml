@@ -8,7 +8,7 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-        app: roadrunner-ecommerce-store-server
+      app: roadrunner-ecommerce-store-server
   template:
     metadata:
       labels:
@@ -19,5 +19,20 @@ spec:
           image: farasatkhan/roadrunner-ecommerce-store-laravel
           ports:
             - containerPort: 80
+          env:
+            - name: APP_ENV
+              value: Laravel
+            - name: APP_KEY
+              value: base64:OC7K7qM8BIupCAnXf8pnWRZI/524HS71VI6QNHQdu4c=
+            - name: DB_HOST
+              value: 127.0.0.1
+            - name: DB_PORT
+              value: 3306
+            - name: DB_DATABASE
+              value: roadrunner_db
+            - name: DB_USERNAME
+              value: root
+            - name: DB_PASSWORD
+              value: root
 
  
