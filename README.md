@@ -3,8 +3,9 @@ After Running `minikube-installation.sh` Run the commands below without root pri
 
 ###### Note: Make sure you run the commands below without root privileges.
 
-1. To start Minikube with the Docker driver, follow the steps below:
+## Start Minikube
 
+1. To start Minikube with the Docker driver, follow the steps below:
 ```
 minikube start --driver=docker
 ```
@@ -20,3 +21,27 @@ minikube version
 ```
 minikube status
 ```
+
+## Import Database
+
+1. Get all the pods
+```
+kubectl get pods
+```
+2. Run the `import_db.sh` script by providing mysql pod.
+```
+./import_db.sh <mysql_server_pod>
+```
+
+## Configure DB_Host
+
+1. Get all the services and note `mysql_service` ip address.
+```
+kubectl get service
+```
+2. Open `apache-deployment.yaml` in an editor.
+```
+vim apache-deployment.yaml
+```
+3. Change DB_HOST value with the ip of the `mysql_service`.
+
