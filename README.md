@@ -44,6 +44,10 @@ kubectl get service
 vim apache-deployment.yaml
 ```
 3. Change DB_HOST value with the ip of the `mysql_service`.
+```
+  - name: DB_HOST
+    value: <mysql_service_ip>
+```
 
 4. Apply Changes
 ```
