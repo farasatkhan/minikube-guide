@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Step 1: Install curl
-sudo apt install curl
+apt install curl
 
 # Step 2: Install Docker
-sudo apt install -y docker.io 
+apt install -y docker.io 
 
 # Step 3: Download kubectl binary
 curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Step 6: Install kubectl
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 # Step 7: Check kubectl version
 kubectl version --client
@@ -30,10 +30,10 @@ kubectl version --client
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
 # Step 9: Install minikube
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
+install minikube-linux-amd64 /usr/local/bin/minikube
 
 # Step 10: Add current user to the docker group
-sudo usermod -aG docker $USER && newgrp docker
+usermod -aG docker $USER && newgrp docker
 
 # Step 11: Start minikube with Docker driver
 minikube start --driver=docker
