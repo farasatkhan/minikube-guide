@@ -45,3 +45,7 @@ vim apache-deployment.yaml
 ```
 3. Change DB_HOST value with the ip of the `mysql_service`.
 
+4. Apply Changes
+```
+kubectl apply -f apache-deployment.yaml
+```
