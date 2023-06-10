@@ -1,7 +1,7 @@
 # MiniKube Installation Guide
 After Running `minikube-installation.sh` Run the commands below without root privileges.
 
-###### Note: Make sure you run the commands below without root privileges.
+###### Note: Make sure you you start the minikube without root privileges.
 
 ## Start Minikube
 
