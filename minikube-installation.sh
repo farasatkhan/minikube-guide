@@ -36,7 +36,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 install minikube-linux-amd64 /usr/local/bin/minikube
 
 # Step 11: Start minikube with Docker driver
-minikube start --driver=docker
+minikube start --driver=docker --force
 
 # Step 12: Set minikube driver to Docker
 minikube config set driver docker
