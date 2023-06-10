@@ -1,19 +1,6 @@
+# MiniKube Installation Guide
 
-
-# Start minikube with Docker driver
-minikube start --driver=docker --force
-
-# Set minikube driver to Docker
-minikube config set driver docker
-
-# Check minikube version
-minikube version
-
-# Check minikube status
-minikube status
-
-
-# MiniKube
+After Running `minikube-installation.sh` Run the commands below without root privileges.
 
 1. To start Minikube with the Docker driver, follow the steps below:
 
