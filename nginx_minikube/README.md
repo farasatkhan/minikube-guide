@@ -27,7 +27,7 @@ cd code
 pwd
 ```
 
-Note: This is already set inside `ngnix-deployment.yaml` but if the folder is named differently then we have to change it accordinly.
+Note: This is already set inside `ngnix-deployment.yaml` but if the folder is named differently then we have to change it accordingly.
 
 
 3. Create an `index.html` file:
