@@ -17,16 +17,14 @@ The above command will start 4 worker nodes.
 minikube ssh
 
 mkdir code
-
-cd code
-
-pwd
 ```
 
 2. [Optional] Note the Path and open `ngnix-deployment.yaml` and Paste it at below hostPath inside volumes.
 
 ```
-/home/docker/code
+cd code
+
+pwd
 ```
 
 Note: This is already set inside `ngnix-deployment.yaml` but if the folder is named differently then we have to change it accordinly.
