@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngnix-server
+  labels:
+    app: ngnix-server
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      app: ngnix
+  template:
+    metadata:
+      labels:
+        app: ngnix
+    spec:
+      securityContext:
+        fsGroup: 101
+      containers:
+        - name: ngnix-container
+          image: nginx:stable-alpine3.17-slim
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: code
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: code
+          hostPath:
+            path: /home/docker/code

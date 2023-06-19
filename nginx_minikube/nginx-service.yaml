@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ngnix-service
+  labels:
+    app: ngnix-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: ngnix
+  ports:
+    - port: 80
