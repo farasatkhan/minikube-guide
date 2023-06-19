@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ngnix-server
+  name: nginx-server
   labels:
-    app: ngnix-server
+    app: nginx-server
 spec:
   replicas: 8
   selector:
     matchLabels:
-      app: ngnix
+      app: nginx
   template:
     metadata:
       labels:
-        app: ngnix
+        app: nginx
     spec:
       securityContext:
         fsGroup: 101
       containers:
-        - name: ngnix-container
+        - name: nginx-container
           image: nginx:stable-alpine3.17-slim
           ports:
             - containerPort: 80
